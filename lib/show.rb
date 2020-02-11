@@ -1,5 +1,5 @@
 class Show
-attr_reader :name, :creator, :characters
+  attr_reader :name, :creator, :characters
 
   def initialize(name_parameter, creator_parameter, characters_parameter)
     @name = name_parameter
@@ -19,4 +19,5 @@ attr_reader :name, :creator, :characters
   def actors
     @characters.reduce([]) { |actors, character| actors << character.actor }
   end
+  
 end

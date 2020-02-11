@@ -17,4 +17,5 @@ class CharacterTest < Minitest::Test
     assert_equal "William Daniels", kitt.actor
     assert_equal 1000000, kitt.salary
   end
+  
 end
