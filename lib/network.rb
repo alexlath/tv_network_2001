@@ -6,4 +6,8 @@ class Network
     @shows = []
   end
 
+  def add_show(show_parameter)
+    @shows << show_parameter
+  end
+
 end
