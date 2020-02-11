@@ -17,4 +17,5 @@ class NetworkTest < Minitest::Test
 
     assert_equal "NBC", nbc.name
   end
+  
 end

@@ -6,5 +6,5 @@ class Character
     @actor = character_data_parameter[:actor]
     @salary = character_data_parameter[:salary]
   end
-
+  
 end

@@ -19,4 +19,5 @@ class Show
   def actors
     @characters.reduce([]) { |actors, character| actors << character.actor }
   end
+  
 end
