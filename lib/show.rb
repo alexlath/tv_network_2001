@@ -14,5 +14,9 @@ attr_reader :name, :creator, :characters
   def highest_paid_actor
     highest_paid_character = @characters.max_by { |character| character.salary }
     highest_paid_character.actor
-   end
+  end
+
+  def actors
+    @characters.reduce([]) { |actors, character| actors << character.actor }
+  end
 end
