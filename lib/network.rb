@@ -16,10 +16,29 @@ class Network
   end
 
   def actors_by_show
-    @shows.reduce({}) do |actors, show|
-      actors[show] = show.characters.map { |character| character.actor }
-      actors
+    @shows.reduce({}) do |actors_by_show, show|
+      actors_by_show[show] = show.actors
+      actors_by_show
     end
+  end
+
+  def shows_by_actor
+    # actors = @shows.map { |show| show.actors }.flatten.uniq
+    #
+    #
+    #
+    # actors_by_show = {}
+    # actors.each do |actor|
+    #   actors_by_show[actor] = shows
+
+    # @shows.reduce({}) do |shows_by_actor, show|
+    #   show.actors.each do |actor|
+    #     shows = []
+    #     shows << show
+    #     shows_by_actor[actor] =
+    #   end
+    #   shows_by_actor
+    #end
   end
 
 end
