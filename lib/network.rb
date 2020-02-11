@@ -15,4 +15,11 @@ class Network
     characters.select { |character| character.salary > 500_000 && character.name == character.name.upcase }
   end
 
+  def actors_by_show
+    @shows.reduce({}) do |actors, show|
+      actors[show] = show.characters.map { |character| character.actor }
+      actors
+    end
+  end
+
 end
