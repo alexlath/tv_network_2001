@@ -10,4 +10,9 @@ attr_reader :name, :creator, :characters
   def total_salary
     @characters.reduce(0) { |salaries, character| salaries + character.salary }
   end
+
+  def highest_paid_actor
+    highest_paid_character = @characters.max_by { |character| character.salary }
+    highest_paid_character.actor
+   end
 end
