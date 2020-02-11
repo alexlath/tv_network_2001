@@ -23,22 +23,13 @@ class Network
   end
 
   def shows_by_actor
-    # actors = @shows.map { |show| show.actors }.flatten.uniq
-    #
-    #
-    #
-    # actors_by_show = {}
-    # actors.each do |actor|
-    #   actors_by_show[actor] = shows
-
-    # @shows.reduce({}) do |shows_by_actor, show|
-    #   show.actors.each do |actor|
-    #     shows = []
-    #     shows << show
-    #     shows_by_actor[actor] =
-    #   end
-    #   shows_by_actor
-    #end
+    #something wrong with grouping here?
+    @shows.reduce({}) do |shows_by_actor, show|
+      show.actors.each do |actor|
+        shows_by_actor[actor] = show
+      end
+      shows_by_actor
+    end
   end
 
 end
