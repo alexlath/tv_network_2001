@@ -10,4 +10,9 @@ class Network
     @shows << show_parameter
   end
 
+  def main_characters
+    characters = @shows.reduce([]) { |characters, show| characters << show.characters }.flatten
+    characters.select { |character| character.salary > 500_000 && character.name == character.name.upcase }
+  end
+
 end
